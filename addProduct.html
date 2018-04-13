@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Add products in to the database</title>
+</head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="/javascripts/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="/javascripts/bootstrap.min.js"></script>
+<!-- <script src="/javascripts/jquery.form-validator.min.js"></script>  -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script> 
+<script type="text/javascript" src="javascripts/addProduct.js"></script>
+
+
+<body>
+    <div class="container-fluid">
+        
+        <div class="h1 well text-center">Add products</div>
+        <form id="addProductForm" >
+            <div class="form-group" >
+                <input type="text" data-validation="length alphanumeric" data-validation-length="5-100"  name="productName" id="productName" class="form-control" placeholder="Product Name">
+            </div>
+            <div class="form-group">
+                <textarea  data-validation="length" data-validation-length="30-100" cols="30" rows="5" type="text" name="productDesc" id="productDesc" class="form-control" placeholder="Product Description"></textarea>
+            </div>
+            <div class="form-group">
+                <select id="productType" name="productType" class="form-control" placeholder="Product Type">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" data-validation="length alphanumeric" data-validation-length="4-100" name="productMaterial" id="productMaterial" class="form-control" placeholder="product Material">
+            </div>
+            <div class="form-group">
+                <select id="productCategory" class="form-control" name="productCategory" placeholder="Product Category">
+                    <!-- <option value="S">Product Category</option> -->
+                </select>
+            </div>
+            <div class="form-group">
+                <select id="productOccasion" class="form-control" name="productOccasion" placeholder="Product Occasion">
+                    <!-- <option value="S">Product Occasion</option> -->
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" id="productSolHeight" data-validation="number" name="productSolHeight" class="form-control" placeholder="product Sol Height e.g. 20">
+            </div>
+            <div class="form-group">
+                <input type="text" id="productSolMaterial" data-validation="length alphanumeric" name="productSolMaterial" data-validation-length="5-100" class="form-control" placeholder="product Sol Material">
+            </div>
+            <div class="form-group">
+                <select id="productManufacturer" class="form-control" name="productManufacturer" placeholder="Product Manufacturer">
+                    <!-- <option value="M">Manufacturer</option> -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button class="btn-primary form-control btn" type="button" id="formSubmit">Submit Form</button>
+            </div>
+        </form>
+        
+        
+        
+    </div>
+</body>

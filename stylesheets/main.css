@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: wheat; */
+    /* height: 2000px; */
+}
+
+.navbar{
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 1000;
+    opacity: 1;
+    background-color: whitesmoke;
+    font-family: 'Black Han Sans', sans-serif;    
+    color: #080808;
+    font-size: 1em;
+    border: none;
+    font-weight: 900;
+
+}
+
+.navbar-brand{
+    font-size: 1.4em;
+}

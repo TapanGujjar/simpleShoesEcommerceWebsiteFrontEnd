@@ -20,8 +20,11 @@
         
         <div class="h1 well text-center">Add products</div>
         <form id="addProductForm" >
+
+            <input type="hidden" name="numVariant" id="numVariant" value=0>
+            <input type="hidden" name="variantIndex" id="variantIndex" value="0">
             <div class="form-group" >
-                <input type="text" data-validation="length alphanumeric" data-validation-length="5-100"  name="productName" id="productName" class="form-control" placeholder="Product Name">
+                <input type="text" data-validation="length" data-validation-length="5-100"  name="productName" id="productName" class="form-control" placeholder="Product Name">
             </div>
             <div class="form-group">
                 <textarea  data-validation="length" data-validation-length="30-100" cols="30" rows="5" type="text" name="productDesc" id="productDesc" class="form-control" placeholder="Product Description"></textarea>
@@ -33,7 +36,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <input type="text" data-validation="length alphanumeric" data-validation-length="4-100" name="productMaterial" id="productMaterial" class="form-control" placeholder="product Material">
+                <input type="text" data-validation="length" data-validation-length="4-100" name="productMaterial" id="productMaterial" class="form-control" placeholder="product Material">
             </div>
             <div class="form-group">
                 <select id="productCategory" class="form-control" name="productCategory" placeholder="Product Category">
@@ -49,12 +52,34 @@
                 <input type="text" id="productSolHeight" data-validation="number" name="productSolHeight" class="form-control" placeholder="product Sol Height e.g. 20">
             </div>
             <div class="form-group">
-                <input type="text" id="productSolMaterial" data-validation="length alphanumeric" name="productSolMaterial" data-validation-length="5-100" class="form-control" placeholder="product Sol Material">
+                <input type="text" id="productSolMaterial" data-validation="length" name="productSolMaterial" data-validation-length="5-100" class="form-control" placeholder="product Sol Material">
             </div>
             <div class="form-group">
                 <select id="productManufacturer" class="form-control" name="productManufacturer" placeholder="Product Manufacturer">
                     <!-- <option value="M">Manufacturer</option> -->
                 </select>
+            </div>
+            <div id="formVariantContainer">
+                <div id="formVariant0">
+                    <div class="form-group">
+                        <input type="text" id="productImageUrl0" name="productImageUrl0" class="form-control" placeholder="Image Url" data-validation="length" data-validation-length="4-40000">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="productColor0" name="productColor0" class="form-control" placeholder="product Color e.g. red,brown" data-validation-length="2-100"> 
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="price0" name="price0" class="form-control" placeholder="price e.g.120" data-validation="number" data-validation-allowing="float,range[1;2000]">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="size0" name="size0" class="form-control" placeholder="sizes e.g. 8,9,10" data-validation-length="1-100">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="quantity0" name="quantity0" class="form-control" placeholder="prices e.g. 80,90,100" data-validation-length="2-100">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="AddMoreVariantButton" class="btn btn-primary form-control">Add More Variant Button</button>
+                    </div>
+                </div>
             </div>
 
             <div class="form-group">

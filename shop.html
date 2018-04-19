@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Add products in to the database</title>
+    </head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/shop.css">
+    
+    <!-- jQuery library -->
+    <script src="/javascripts/jquery.min.js"></script>
+    <!-- Iconic Framework -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet"> 
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <!-- <script src="/javascripts/jquery.form-validator.min.js"></script>  -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script> 
+    <script src="javascripts/shop.js"></script>
+    
+    <body>
+        <nav class="navbar navbar-default top-bar fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Shoes Inc</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="home.html">Home</a></li>
+                        <li><a href="shop.html"><span class="ion-ios-cartShop"></span>Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">MyAccount</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Signup</a></li>
+                        <!-- <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li> -->
+                        <!-- <li><a href="../navbar-static-top/">Static top</a></li> -->
+                        <!-- <li><a href="../navbar-fixed-top/">Fixed top</a></li> -->
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+            
+        </nav>
+
+        <div class="container-fluid">
+            <div class="searchForm">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control"  id="productSearch" name="productSearch" placeholder="Search e.g. shoes">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+
+                <div class="row text-center searchResult">
+                    <div class="  col-md-2 filterContainer">
+                        <h3 >Filters</h3>
+                        <h5>Type</h5>
+                        <div class="TypeContainer">
+                            <label><input class='checkbox'  id="type_m" type="checkbox">Male</label><br>
+                            <label><input  class='checkbox' id="type_f" type="checkbox">Female</label>
+                        </div>
+                        <h5 >Categories</h5>
+                        <div class="categoryCheckBoxContainer">
+
+                        </div>
+                        <h5 >Occasion</h5>
+                        <div class="occasionCheckBoxContainer">
+
+                        </div>
+                        <h5>Company</h5>
+                        <div class="companyCheckBoxContainer">
+
+                        </div>
+                        <h5>Size</h5>
+                        <div class="sizeCheckBoxContainer">
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-8 searchContent">
+                        
+
+                        <!-- <div class="form-control btn btn-primary">ADD MORE</div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>    

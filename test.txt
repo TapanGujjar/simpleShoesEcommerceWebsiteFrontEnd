@@ -1,0 +1,42 @@
+Select  * from products p inner join
+(select pc.productID,pc.productColorID,pcs.productSizeID,pc.productImageUrl,pc.price,pcs.size,pcs.quantity from productColor pc
+inner join productColorSize pcs
+on pc.productColorID=pcs.productColorID) as DT
+
+
+
+create view searchProductView as
+Select * from products p	
+inner join 
+(Select temp1.productID,temp1.productColorID,pcs.productSizeID,temp1.productImageUrl,temp1.price,temp1.colorName,pcs.size,pcs.quantity from productColorSize pcs
+inner join
+(Select pc.productID,pc.productColorID,pc.productImageUrl,pc.price,pcj.colorName
+ from productColor pc 
+inner join productColorJunction pcj
+on (pc.productColorID=pcj.productColorID)) as temp1
+on (temp1.productColorID=pcs.productColorID)) as temp2
+
+
+
+
+create view searchProduct
+SELECT 
+p.productID,pc.productColorID,pcs.productSizeID,p.productName,p.productDesc,p.productType,p.productMaterial,c.categoryID,c.categoryName,m.companyID,m.companyName,
+o.occasionID,o.occasionName,p.productSolHeight,p.productSolMaterial,pc.productImageUrl,pc.price,pcs.size,pcs.quantity,pcj.colorName
+from products p,productColorSize pcs,productColor pc,productColorJunction pcj,categories c,company m,occasion o
+WHERE p.productID=pc.productID and pc.productColorID=pcs.productColorID and pcj.productColorID=pc.productColorID and c.categoryID=p.productCategory
+and p.productOccasion=o.occasionID and p.productManufacturers=m.companyID
+
+on (p.productID=temp2.productID)
+
+
+
+SELECT 
+ @autoIncrementNumber:=@autoIncrementNumber + 1  as 'id',p.productID,pc.productColorID,pcs.productSizeID,p.productName,p.productDesc,p.productType,p.productMaterial,c.categoryID,c.categoryName,m.companyID,m.companyName,
+o.occasionID,o.occasionName,p.productSolHeight,p.productSolMaterial,pc.productImageUrl,pc.price,pcs.size,pcs.quantity,pcj.colorName
+from products p,productColorSize pcs,productColor pc,productColorJunction pcj,categories c,company m,occasion o
+WHERE p.productID=pc.productID and pc.productColorID=pcs.productColorID and pcj.productColorID=pc.productColorID and c.categoryID=p.productCategory
+and p.productOccasion=o.occasionID and p.productManufacturers=m.companyID
+
+
+

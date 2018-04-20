@@ -1,4 +1,4 @@
-var baseUrl="http://localhost:9000/";
+var baseUrl="http://18.219.161.206:9000/";
 
 var limit=1;
 var offset=0;
@@ -42,12 +42,9 @@ $(document).ready(function(){
             <h4 class="searchItemName">`+dataObjects[i].productName+`</h4>
             <h6 class="searchItemPrice">`+dataObjects[i].price+`</h6>
             <div class="row">
-                <div class="col-md-6">
-                    <button class="btn btn-danger" id=wishlist_"`+dataObjects[i].productColorID+`">Wishlist</button>
-                </div>
-                <div class="col-md-6">
-                        <button class="btn btn-primary" id=cart_"`+dataObjects[i].productID+`_`+dataObjects[i].productColorID+`">Cart</button>
-                </div>
+               
+                        <button class="btn btn-primary" id=viewProduct_"`+dataObjects[i].productID+`_`+dataObjects[i].productColorID+`">ViewProduct</button>
+                
             </div>
             </div>`;
         }
@@ -105,10 +102,20 @@ $(document).ready(function(){
 
     $(document).on("click",function(event){
         times=times+1;
-        if(event.target.id=="loadMoreButton"){
-            formSubmissionGet(baseUrl+"api/product/all?offset="+limit*times,addProductToHtml,['searchContent'],null);            
+        // if(event.target.id=="loadMoreButton"){
+        //     formSubmissionGet(baseUrl+"api/product/all?offset="+limit*times,addProductToHtml,['searchContent'],null);            
         
+        // }
+        target=event.target.id;
+        target=target.split("_");
+        if(target[0]=="viewProduct"){
+            sessionStorage.setItem("productID",target[1]);
+            sessionStorage.setItem("productColorID",target[2]);
+            window.location.replace("viewProduct.html");
         }
+        
+
+        
     });
 
     $(document).on("click",".checkbox",function(event){

@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Sigup / Login</title>
+    </head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/signup.css">
+    
+    <!-- jQuery library -->
+    <script src="/javascripts/jquery.min.js"></script>
+    <!-- Iconic Framework -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet"> 
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <!-- <script src="/javascripts/jquery.form-validator.min.js"></script>  -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script> 
+    <script src="javascripts/main.js"></script>
+    <script src="javascripts/signup.js"></script>
+    
+    <body>
+        <nav class="navbar navbar-default top-bar fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Shoes Inc</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="home.html">Home</a></li>
+                        <li><a href="shop.html"><span class="ion-ios-cartShop"></span>Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- <li><a href="#">MyAccount</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Signup</a></li> -->
+                        <!-- <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li> -->
+                        <!-- <li><a href="../navbar-static-top/">Static top</a></li> -->
+                        <!-- <li><a href="../navbar-fixed-top/">Fixed top</a></li> -->
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+            
+        </nav>
+
+        <div class="container-fluid mainContainer">
+
+            <div class="row">
+
+                <!-- Login Form-->
+                <div class="loginFormContainer col-md-6">
+                    <h2 class="text-center">Login</h2>
+
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <input type="email"  data-validation="email" placeholder="Email" id="loginEmail" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" id="loginPassword"  data-validation="length" data-validation-length="min8" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary form-control" id="loginButton">Login</button>
+                        </div>
+
+                    </form>
+                </div>
+
+
+                <!--Signup Form-->
+                <div class="signupFormContainer col-md-6">
+                    <h2 class="text-center">SignUp</h2>
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <input type="fname" name="fname" id="signupFname" placeholder="First Name" data-validation-length="min5" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="lname" name="lname" id="signupLname" placeholder="Last Name" data-validation-length="min5" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email"  data-validation="email" placeholder="Email" id="signupEmail" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input name="password"  type="password" class="form-control" id="signupPassword" placeholder="Password" data-validation="length" data-validation-length="min8">                            
+                        </div>
+
+                        <div class="form-group">
+                            <input name="repeartPassword" type="password" class="form-control" id="signupRepeatPassword" placeholder="repeat Password" data-validation="confirmation" data-validation-confirm="password">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-danger form-control" type="button" id="signupBtn">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+        </div>
+</body>
+</html>

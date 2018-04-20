@@ -15,7 +15,7 @@ lang = {
     
 };
 
-var baseUrl="http://localhost:9000/";
+var baseUrl="http://18.219.161.206:9000/";
 
 
 $(document).ready(function(){
@@ -61,7 +61,7 @@ $(document).ready(function(){
                 <input type="text" id="size`+numVariant+`" name="size`+numVariant+`" class="form-control" placeholder="sizes e.g. 8,9,10" data-validation-length="1-100">
             </div>
             <div class="form-group">
-                <input type="text" id="quantity`+numVariant+`" name="quantity`+numVariant+`" class="form-control" placeholder="prices e.g. 80,90,100" data-validation-length="2-100">
+                <input type="text" id="quantity`+numVariant+`" name="quantity`+numVariant+`" class="form-control" placeholder="size quantity e.g. 80,90,100" data-validation-length="2-100">
             </div>
             <div class="form-group">
                 <button type="button" id="removeProductVariant_`+numVariant+`" class="btn btn-danger form-control">Remove Product Variant Button</button>

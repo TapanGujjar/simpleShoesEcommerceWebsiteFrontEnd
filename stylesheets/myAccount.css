@@ -1,0 +1,28 @@
+body{
+    font-family: "Do Hyeon "
+}
+
+.filterContainer{
+    border: 2px solid wheat;
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 50px;
+    padding-left: 40px;
+}
+
+.searchContent{
+    display: float;
+}
+
+.searchItem{
+    float: left;
+}
+
+.searchItemImage{
+    height: 100px;
+    width:100px;
+}
+
+#loadMoreButton{
+    margin: 30px;
+}

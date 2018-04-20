@@ -1,0 +1,58 @@
+.imageContainer > img{
+    height: 400px;
+    width: 400px;
+    border: 2px solid grey;
+    margin-left: 100px;
+    padding: 40px;
+    
+    
+}
+.contentContainer{
+    font-family: 'Black Han Sans', sans-serif;    
+    
+}
+
+#productSizeSelect{
+    margin-top: 100px;
+}
+
+.buttonContainer{
+    margin-top: 30px;
+}
+
+button{
+    margin-top:10px;
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:darkslategrey;
+    height: 1px;
+  }
+
+.productDescContainer{
+    font-family: 'Do Hyeon', sans-serif;    
+    
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

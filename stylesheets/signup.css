@@ -1,0 +1,21 @@
+.mainContainer{
+    margin-top: 100px;
+    font-family: 'Do Hyeon', sans-serif;    
+}
+
+#loginForm{
+    /* background-color: red; */
+    padding: 60px;
+}
+
+#signupForm{
+    padding: 60px;
+}
+
+.loginFormContainer{
+    /* border-right: 2px solid black; */
+}
+
+.signupFormContainer{
+    border-left: 2px solid black;
+}

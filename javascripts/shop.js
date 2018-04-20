@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     formSubmissionGet(baseUrl+"api/product/sizes",addSizeCheckBox,['sizeCheckBoxContainer'],null);
         
-    formSubmissionGet(baseUrl+"api/product/all?offset="+offset,addProductToHtml,['searchContent'],null);
+    // formSubmissionGet(baseUrl+"api/product/all?offset="+offset,addProductToHtml,['searchContent'],null);
 
 
     function addCheckBox(dataObjects,parameterArray){
